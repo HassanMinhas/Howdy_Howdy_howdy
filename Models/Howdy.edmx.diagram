@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="23d573b54063430f9ed55e1a52441b3d" Name="Diagram1">
+        <EntityTypeShape EntityType="db4da6600bb2a346f6b5aca60a0121b169Model.Admin" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db4da6600bb2a346f6b5aca60a0121b169Model.Category" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db4da6600bb2a346f6b5aca60a0121b169Model.Item" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="db4da6600bb2a346f6b5aca60a0121b169Model.Order" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db4da6600bb2a346f6b5aca60a0121b169Model.Ordered_Product" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db4da6600bb2a346f6b5aca60a0121b169Model.Review" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="db4da6600bb2a346f6b5aca60a0121b169Model.FK_Items_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="db4da6600bb2a346f6b5aca60a0121b169Model.FK_Ordered_Product_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="db4da6600bb2a346f6b5aca60a0121b169Model.FK_Ordered_Product_Order" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
