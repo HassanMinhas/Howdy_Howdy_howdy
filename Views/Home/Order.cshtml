@@ -185,7 +185,7 @@
                                 <option value=""> Products</option>
                                 <option value=""> Categories</option>
                                 <option value="">Reviews</option>
-                                <option value="">Reviews</option>
+                                <option value="">Orders</option>
                             </select>
                         </td>
                         <td>
@@ -357,6 +357,7 @@
                                             <th class="table-header-repeat line-left minwidth-1"><a href="">Order ID</a></th>
                                             <th class="table-header-repeat line-left minwidth-1"><a href="">Table ID</a></th>
                                             <th class="table-header-options line-left"><a href="">Bill</a></th>
+                                            <th class="table-header-options line-left"><a href="">Date/Time</a></th>
                                             <th class="table-header-repeat line-left"><a href="">Item(s)</a></th>
                                             
                                             
@@ -367,11 +368,13 @@
                                             {
                                             <tr>
 
-                                                <td> @s.Order_id  </td>
+                                                <td>@s.Order_id  </td>
                                                 <td>@s.Table_No</td>
                                                 <td>@s.Total_Bill</td>
+                                                <td>@s.Date_Time</td>
                                                 <td class="options-width">
-                                                    <a href="/Home/CheckProduct/@s.Order_id" title="Edit" class="icon-1 info-tooltip"></a>
+                                                    <a href="@Url.Action("CheckProduct", "Home", new { id = s.Order_id })" title="View Products" class="icon-1 info-tooltip"></a>
+                                                   <!-- <a href="/Home/CheckProduct/@s.Order_id" title="View Products" class="icon-1 info-tooltip"></a> -->
                                                 </td>
                                             </tr>
                                             }
