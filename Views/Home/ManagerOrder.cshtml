@@ -3,13 +3,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Howdy - List</title>
     <link rel="stylesheet" href="~/Content/css/screen.css" type="text/css" media="screen" title="default" />
- 
+    <link rel="stylesheet" href="~/Content/css/pop.css" type="text/css" />
     <!--[if IE]>
     <link rel="stylesheet" media="all" type="text/css" href="css/pro_dropline_ie.css" />
     <![endif]-->
     <!--  jquery core -->
     <script src="~/Scripts/js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>
-   
+    <script src="~/Scripts/js/jquery/popup.js" type="text/javascript"></script>
 
     <!--  checkbox styling script -->
     <script src="~/Scripts/js/jquery/ui.core.js" type="text/javascript"></script>
@@ -341,6 +341,13 @@
                     <th class="topright"></th>
                     <th rowspan="3" class="sized"><img src="~/images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
                 </tr>
+                <form action="/api/Serving/time" method="get" enctype="multipart/form-data">
+
+
+                    <label for="email">Enter the Serving Time</label>
+                    <input type="text" class="inp-form" name="time" />
+                    <input type="submit" value="Send" id="message_submit" />
+                </form>
                 <tr>
                     <td id="tbl-border-left"></td>
                     <td>
@@ -354,6 +361,7 @@
                                 <!--  start product-table ..................................................................................... -->
                                 <form id="mainform" action="">
                                     <table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
+                                       
                                         <tr>
 
                                             <th class="table-header-repeat line-left minwidth-1"><a href="">Order ID</a></th>
@@ -362,7 +370,7 @@
 
 
                                         </tr>
-                                             <tr>
+                                            <tr>
 
                                                  @foreach (var s in Model)
                                                   {
@@ -372,12 +380,14 @@
                                                       <td>@s.Table_No</td>
                                                       <td class="options-width">
                                                           <a href="@Url.Action("CheckProduct", "Home", new { id = s.Order_id })" title="View Products" class="icon-1 info-tooltip"></a>
-                                                          <a href="@Url.Action("popUpWindow", "Home")" title= "Serving Time" class="icon-1 info-tooltip"></a>
+                                                         <a href="@Url.Action("popUpWindow", "Home")" title= "Serving Time" class="icon-2 info-tooltip"></a>
+
+
                                                       </td>
                                                   </tr>
-                                                  }
+                                                  } 
                 </tr> 
-              
+               
             </table>
             <!--  end product-table................................... -->
             </form>
