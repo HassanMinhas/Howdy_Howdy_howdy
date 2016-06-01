@@ -161,6 +161,16 @@
             $(document).pngFix();
         });
     </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#alert_html").click(function () {
+                jAlert('HTML attributes , such as <strong>bold</strong>, <em>italics</em>, and <u>underline</u>! <a href="http://www.google.com">your site</a>');
+            });
+
+        });
+    </script>
 </head>
 <body>
     <!-- Start: page-top-outer -->
@@ -247,18 +257,9 @@
                 <div class="table">
 
 
-                    <ul class="select">
-                        <li>
-                            <a href="/Home/AllProducts"><b>Products</b><!--[if IE 7]><!--></a><!--<![endif]-->
-                            <!--[if lte IE 6]><table><tr><td><![endif]-->
-                            <div class="select_sub">
-                                <ul class="sub">
-                                    <li><a href="/Home/AllProducts">View all products</a></li>
-                                    <li><a href="/Home/Product">Add product</a></li>
-                                </ul>
-                            </div>
-                            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-                        </li>
+                    <ul class="current">
+                        <li><a href="/Home/ManageOrder"><b>View Orders</b><!--[if IE 7]><!--></a><!--<![endif]--></li>
+                       
                     </ul>
 
                     <div class="nav-divider">&nbsp;</div>
@@ -266,7 +267,7 @@
                     <ul class="select">
                         <li>
                             <a href="/Home/AllCategories"><b>Categories</b><!--[if IE 7]><!--></a><!--<![endif]-->
-                            <!--[if lte IE 6]><table><tr><td><![endif]-->
+                            <!--[if lte IE 6]><table><tr><td><![endif]
                             <div class="select_sub">
                                 <ul class="sub">
                                     <li><a href="/Home/AllCategories">View All</a></li>
@@ -291,19 +292,16 @@
 
                     <div class="nav-divider">&nbsp;</div>
 
-                    <ul class="current">
+                    <ul class="select">
                         <li>
-                            <a href="/Home/Order"><b>Orders</b><!--[if IE 7]><!--></a><!--<![endif]-->
-                            <!--[if lte IE 6]><table><tr><td><![endif]-->
-                            <div class="select_sub show">
-                                <ul class="sub">
-                                    <li><a href="/Home/Order">All</a></li>
-                                    <li><a href="/Home/Order">Pending</a></li>
-                                    <li><a href="/Home/Order">Paid</a></li>
-
-                                </ul>
-                            </div>
-                            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                            <a href="/Home/AllProducts"><b>Products</b><!--[if IE 7]><!--></a><!--<![endif]-->
+                            <!--[if lte IE 6]><table><tr><td><![endif]
+        <div class="select_sub">
+            <ul class="sub">
+                <li><a href="/Home/AllProducts">View all products</a></li>
+            </ul>
+        </div>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
                         </li>
                     </ul>
 
@@ -370,9 +368,7 @@
                                                 <td>@s.Table_No</td>
                                                 <td>@s.Date_Time</td>
                                                 <td class="options-width">
-                                                    <a href="@Url.Action("CheckProduct", "Home", new { id = s.Order_id })" title="View Products" class="icon-1 info-tooltip"></a>
-                                                    <a href="" title="Enter Serving Time" class="icon-1 info-tooltip"></a>
-                                                    
+                                                    <a href="@Url.Action("CheckProduct", "Home", new { id = s.Order_id })" title="View Products" class="icon-1 info-tooltip"></a>                                                   
                                                 </td>
                                             </tr>
                                             }
